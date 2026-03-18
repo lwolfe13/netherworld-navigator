@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netherworld Navigator - Legal Aid Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="netherworld-container">
+        <!-- Header -->
+        <header class="netherworld-header">
+            <div class="header-content">
+                <h1 class="mystical-title">⚖️ Netherworld Navigator</h1>
+                <p class="subtitle">AI-Powered Legal Aid for Estate Management</p>
+                <div class="connection-status" id="connectionStatus">
+                    <span class="status-indicator" id="statusIndicator">●</span>
+                    <span id="statusText">Connecting...</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar - Realms Navigation -->
+            <aside class="sidebar">
+                <div class="realms-container">
+                    <h3 class="realms-title">🏛️ Netherworld Realms</h3>
+                    <nav class="realms-nav">
+                        <div class="realm-item active" data-realm="mortal">
+                            <span class="realm-icon">💀</span>
+                            <span class="realm-name">Mortal</span>
+                            <span class="realm-desc">Death & Estate Opening</span>
+                        </div>
+                        <div class="realm-item" data-realm="transition">
+                            <span class="realm-icon">🌉</span>
+                            <span class="realm-name">Transition</span>
+                            <span class="realm-desc">Asset Transfer</span>
+                        </div>
+                        <div class="realm-item" data-realm="authority">
+                            <span class="realm-icon">🏛️</span>
+                            <span class="realm-name">Authority</span>
+                            <span class="realm-desc">Legal Powers & Jurisdiction</span>
+                        </div>
+                        <div class="realm-item" data-realm="inheritance">
+                            <span class="realm-icon">👑</span>
+                            <span class="realm-name">Inheritance</span>
+                            <span class="realm-desc">Beneficiary Rights</span>
+                        </div>
+                        <div class="realm-item" data-realm="judgment">
+                            <span class="realm-icon">⚖️</span>
+                            <span class="realm-name">Judgment</span>
+                            <span class="realm-desc">Court Proceedings</span>
+                        </div>
+                        <div class="realm-item" data-realm="wisdom">
+                            <span class="realm-icon">🔮</span>
+                            <span class="realm-name">Wisdom</span>
+                            <span class="realm-desc">Best Practices</span>
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h4>⚡ Quick Actions</h4>
+                    <button class="action-btn" onclick="startStateComparison()">
+                        🗺️ Compare State Laws
+                    </button>
+                    <button class="action-btn" onclick="generateCommunication()">
+                        📧 Generate Communication
+                    </button>
+                    <button class="action-btn" onclick="exportDatabase()">
+                        📊 Export Database
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Chat Area -->
+            <main class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="welcome-message">
+                        <div class="message-content">
+                            <h2>🔮 Welcome to the Netherworld Navigator</h2>
+                            <p>Your AI-powered guide through the complex realm of estate law. Ask me about:</p>
+                            <ul>
+                                <li>🏛️ Multi-state jurisdiction questions</li>
+                                <li>📋 Required documentation and procedures</li>
+                                <li>⚖️ Probate and estate administration</li>
+                                <li>👥 Beneficiary rights and responsibilities</li>
+                                <li>🏦 Asset transfer requirements</li>
+                            </ul>
+                            <p class="disclaimer">⚠️ <em>This system provides legal guidance, not legal advice. Always consult with qualified attorneys for specific cases.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="queryInput" 
+                            placeholder="Ask about estate law, jurisdiction, or documentation requirements..."
+                            rows="3"
+                        ></textarea>
+                        <button id="sendButton" class="send-btn" onclick="sendQuery()">
+                            <span class="btn-text">Navigate</span>
+                            <span class="btn-icon">🧭</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
